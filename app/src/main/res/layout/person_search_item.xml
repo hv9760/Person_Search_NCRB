@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="7dp"
+
+            app:cardBackgroundColor="@color/white"
+
+
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+               android:padding="4dp"
+                android:layout_height="match_parent">
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:drawableLeft="@drawable/u_name"
+                          android:drawablePadding="10dp"
+
+                          android:gravity="center_vertical"
+
+                          android:text="Person Name"
+                          android:textColor="@color/black"
+                          android:textSize="14dp" />
+
+
+                      <TextView
+                          android:id="@+id/txt_person_name"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+
+                          android:text="dewifiefui"
+
+                          android:textColor="@color/gray"
+                          android:textSize="14dp" />
+
+
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:drawableLeft="@drawable/a_name"
+
+                          android:drawablePadding="10dp"
+
+                          android:gravity="center_vertical"
+                          android:text="Alias"
+                          android:textColor="@color/black"
+                          android:textSize="14dp" />
+
+
+                      <TextView
+                          android:id="@+id/txt_person_alias"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+
+                          android:textColor="@color/gray"
+                          android:textSize="14dp" />
+
+
+
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:drawableLeft="@drawable/type"
+                          android:drawablePadding="10dp"
+
+                          android:gravity="center_vertical"
+                          android:text="Relation Type"
+                          android:textColor="@color/black"
+                          android:textSize="14dp" />
+
+
+                      <TextView
+                          android:id="@+id/txt_person_relation_type"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+
+                          android:textColor="@color/gray"
+                          android:textSize="14dp" />
+
+
+
+                  </LinearLayout>
+
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:drawableLeft="@drawable/r_name"
+                          android:drawablePadding="10dp"
+
+                          android:gravity="center_vertical"
+                          android:text="Relative Name"
+                          android:textColor="@color/black"
+                          android:textSize="14dp" />
+
+
+                      <TextView
+                          android:id="@+id/txt_person_relative_name"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+
+                          android:textColor="@color/gray"
+                          android:textSize="14dp" />
+
+
+
+                  </LinearLayout>
+
+
+              </LinearLayout>
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

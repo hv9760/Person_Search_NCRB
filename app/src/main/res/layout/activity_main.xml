@@ -1,0 +1,110 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height = "match_parent" android:paddingLeft= "@dimen/activity_horizontal_margin"
+    android:paddingRight = "@dimen/activity_horizontal_margin"
+    android:paddingTop = "@dimen/activity_vertical_margin"
+    android:background="@android:color/white"
+    android:paddingBottom = "@dimen/activity_vertical_margin" tools:context = ".MainActivity">
+
+    <TextView android:text = "Login"
+        android:layout_width="wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/textLogin"
+        android:textSize = "0dp"
+        android:layout_alignParentTop = "true"
+        android:layout_centerHorizontal = "true" />
+
+    <TextView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text ="Government of India"
+        android:id = "@+id/textView"
+        android:layout_below = "@+id/imageView"
+        android:layout_centerHorizontal = "true"
+        android:textColor = "#3336FF"
+        android:textSize = "17dp" />
+    <TextView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text ="Ministry of Home Affairs"
+        android:id = "@+id/textView1"
+        android:layout_below = "@+id/textView"
+        android:layout_centerHorizontal = "true"
+        android:textColor = "#3336FF"
+        android:textSize = "17dp" />
+    <TextView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text ="National Crime Records Bureau"
+        android:id = "@+id/textView2"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal = "true"
+        android:textColor = "#3336FF"
+        android:textSize = "20dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/ncrb"
+        android:layout_below="@+id/textLogin"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/edt_userid"
+        android:hint = "Enter User ID"
+        android:textColorHint = "#3336FF"
+        android:textColor = "#3336FF"
+        android:layout_marginTop = "100dp"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:ems="10"
+        android:layout_below = "@+id/imageView"
+        android:layout_alignParentLeft = "true"
+        android:layout_alignParentStart = "true"
+        android:layout_alignParentRight = "true"
+        android:layout_alignParentEnd = "true" />
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/edt_password"
+        android:layout_below="@+id/edt_userid"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/edt_userid"
+        android:layout_alignEnd="@+id/edt_userid"
+        android:textColorHint="#3336FF"
+        android:textColor = "#3336FF"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login"
+        android:textColor = "#3336FF"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/textLogin"
+        android:layout_toStartOf="@+id/textLogin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textColor = "#3336FF"
+        android:id="@+id/btn_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textLogin"
+        android:layout_toEndOf="@+id/textLogin" />
+
+</RelativeLayout>

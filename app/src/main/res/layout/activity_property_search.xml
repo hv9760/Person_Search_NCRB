@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_property_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/btn_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_arrow"
+                android:textAlignment="center"
+                android:textColor="#3336FF"
+                android:layout_weight="0.3"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:text="Vehicle"
+            />
+
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:shrinkColumns="1"
+            android:stretchColumns="1"
+            android:layout_marginTop="10dp">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/Automobile_Type"
+                    android:textSize="15dp"
+                    android:textColor = "#3336FF"
+                    android:paddingRight="10dp"
+                    />
+                <Spinner
+                    android:id="@+id/sp_Type_Vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="25dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:layout_height="40dp"
+                    android:prompt="@string/Automobile_Type"
+                    android:spinnerMode="dropdown"
+                    android:background="@android:drawable/btn_dropdown"
+                    >
+                </Spinner>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/Manu_Type"
+                    android:textSize="15dp"
+                    android:textColor = "#3336FF"
+                    android:paddingRight="10dp"
+                    />
+                <Spinner
+                    android:id="@+id/sp_Manufacturer"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="25dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:layout_height="40dp"
+                    android:spinnerMode="dropdown"
+                    android:prompt="@string/Manu_Type"
+                    android:background="@android:drawable/btn_dropdown"
+                    >
+                </Spinner>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/Model_Type"
+                    android:textSize="15dp"
+                    android:textColor = "#3336FF"
+                    android:paddingRight="10dp"
+                    />
+                <Spinner
+                    android:id="@+id/sp_model"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="25dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:layout_height="40dp"
+                    android:spinnerMode="dropdown"
+                    android:background="@android:drawable/btn_dropdown"
+                    >
+                </Spinner>
+
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/Color_Type"
+                    android:textSize="15dp"
+                    android:textColor = "#3336FF"
+                    android:paddingRight="10dp"
+                    />
+                <Spinner
+                    android:id="@+id/sp_color"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="25dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:layout_height="40dp"
+                    android:spinnerMode="dropdown"
+                    android:background="@android:drawable/btn_dropdown"
+                    >
+                </Spinner>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="District"
+                    android:textSize="15dp"
+                    android:textColor = "#3336FF"
+                    android:paddingRight="10dp"
+                    />
+                <Spinner
+                    android:id="@+id/District"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="25dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:layout_height="40dp"
+                    android:spinnerMode="dropdown"
+                    android:background="@android:drawable/btn_dropdown"
+                    >
+                </Spinner>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Police Station"
+                    android:textSize="15dp"
+                    android:textColor = "#3336FF"
+                    android:paddingRight="10dp"
+                    />
+                <Spinner
+                    android:id="@+id/PS"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="25dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:layout_height="40dp"
+                    android:spinnerMode="dropdown"
+                    android:background="@android:drawable/btn_dropdown"
+                    >
+                </Spinner>
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TextView
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:text="Vehicle Detail"
+            />
+
+
+        <EditText
+            android:id="@+id/edt_Reg_Num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColorHint = "#3336FF"
+            android:textColor = "#3336FF"
+            android:layout_marginTop="10dp"
+            android:hint="Registration Number"/>
+
+        <EditText
+            android:id="@+id/edt_Chasis_Num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColorHint = "#3336FF"
+            android:textColor = "#3336FF"
+            android:hint="Chasis Number"/>
+        <EditText
+            android:id="@+id/edt_Engine_Num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColorHint = "#3336FF"
+            android:textColor = "#3336FF"
+            android:hint="Full  Engine Number"/>
+
+        <TextView
+            android:background="@android:color/holo_blue_light"
+            android:id="@+id/txt_search_criteria"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:text="Search Criteria "
+            />
+
+        <CheckBox
+            android:id="@+id/chkFIR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:text="@string/chk_fir" />
+
+        <CheckBox
+            android:id="@+id/chkUAP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:text="@string/chk_uap"
+            />
+
+        <CheckBox
+            android:id="@+id/chkPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:text="@string/chk_ps" />
+
+
+        <Button
+            android:id="@+id/btn_Prop_Auto_Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textSize="15dp"
+            android:height="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor = "#3336FF"
+            android:textAlignment="center"
+            />
+
+
+    </LinearLayout>
+</ScrollView>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="10dp"-->
+    <!--android:fillViewport="false">-->
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:id="@+id/activity_property_search"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:weightSum="3">-->
+            <!--<ImageButton-->
+                <!--android:id="@+id/btn_Back"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@drawable/homeicon"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="#3336FF"-->
+                <!--android:layout_weight="0.3"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txt_view_header"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:text="Automobile Search"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:textColor="#3336FF"-->
+                <!--android:background="#CACFD2"-->
+                <!--android:textSize="20dp"-->
+                <!--android:textAlignment="center"-->
+                <!--android:layout_weight="2.7"-->
+                <!--/>-->
+
+        <!--</LinearLayout>-->
+
+
+        <!--<TableLayout-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_weight="1"-->
+            <!--android:shrinkColumns="1"-->
+            <!--android:stretchColumns="1"-->
+            <!--android:layout_marginTop="10dp">-->
+
+            <!--<TableRow>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:text="@string/Automobile_Type"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:textColor = "#3336FF"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--/>-->
+                <!--<Spinner-->
+                    <!--android:id="@+id/sp_Type_Vehicle"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:minHeight="25dp"-->
+                    <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:prompt="@string/Automobile_Type"-->
+                    <!--android:spinnerMode="dropdown"-->
+                    <!--android:background="@android:drawable/btn_dropdown"-->
+                    <!--&gt;-->
+                <!--</Spinner>-->
+            <!--</TableRow>-->
+            <!--<TableRow>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:text="@string/Manu_Type"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:textColor = "#3336FF"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--/>-->
+                <!--<Spinner-->
+                    <!--android:id="@+id/sp_Manufacturer"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:minHeight="25dp"-->
+                    <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:spinnerMode="dropdown"-->
+                    <!--android:prompt="@string/Manu_Type"-->
+                    <!--android:background="@android:drawable/btn_dropdown"-->
+                    <!--&gt;-->
+                <!--</Spinner>-->
+            <!--</TableRow>-->
+            <!--<TableRow>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:text="@string/Model_Type"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:textColor = "#3336FF"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--/>-->
+                <!--<Spinner-->
+                    <!--android:id="@+id/sp_model"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:minHeight="25dp"-->
+                    <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:spinnerMode="dropdown"-->
+                    <!--android:background="@android:drawable/btn_dropdown"-->
+                    <!--&gt;-->
+                <!--</Spinner>-->
+
+
+            <!--</TableRow>-->
+            <!--<TableRow>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:text="@string/Color_Type"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:textColor = "#3336FF"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--/>-->
+                <!--<Spinner-->
+                    <!--android:id="@+id/sp_color"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:minHeight="25dp"-->
+                    <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:spinnerMode="dropdown"-->
+                    <!--android:background="@android:drawable/btn_dropdown"-->
+                    <!--&gt;-->
+                <!--</Spinner>-->
+            <!--</TableRow>-->
+
+
+
+            <!--<TableRow>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:text="@string/District"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:textColor = "#3336FF"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--/>-->
+                <!--<Spinner-->
+                    <!--android:id="@+id/District"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:minHeight="25dp"-->
+                    <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:spinnerMode="dropdown"-->
+                    <!--android:background="@android:drawable/btn_dropdown"-->
+                    <!--&gt;-->
+                <!--</Spinner>-->
+            <!--</TableRow>-->
+            <!--<TableRow>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:text="@string/PS"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:textColor = "#3336FF"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--/>-->
+                <!--<Spinner-->
+                    <!--android:id="@+id/PS"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:minHeight="25dp"-->
+                    <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:spinnerMode="dropdown"-->
+                    <!--android:background="@android:drawable/btn_dropdown"-->
+                    <!--&gt;-->
+                <!--</Spinner>-->
+            <!--</TableRow>-->
+        <!--</TableLayout>-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/edt_Reg_Num"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint = "#3336FF"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:hint="Registration Number"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edt_Chasis_Num"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint = "#3336FF"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:hint="Chasis Number"/>-->
+        <!--<EditText-->
+            <!--android:id="@+id/edt_Engine_Num"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint = "#3336FF"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:hint="Full  Engine Number"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_search_criteria"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textSize="15dp"-->
+            <!--android:text="Search Criteria "-->
+            <!--/>-->
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/chkFIR"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:text="@string/chk_fir" />-->
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/chkUAP"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:text="@string/chk_uap"-->
+            <!--/>-->
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/chkPS"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:text="@string/chk_ps" />-->
+
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_Prop_Auto_Search"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Search"-->
+            <!--android:textSize="15dp"-->
+            <!--android:height="25dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:textAlignment="center"-->
+            <!--/>-->
+
+
+    <!--</LinearLayout>-->
+<!--</ScrollView>-->

@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_person_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context="com.ncrb.samapre.myapplication.MainActivity">
+
+        <TextView
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:text="Personal Detail"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+            <ImageButton
+                android:id="@+id/btn_Back"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:background="@drawable/homeicon"
+                android:textAlignment="center"
+                android:textColor="#3336FF"
+                android:layout_weight="0.3"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <EditText
+                android:id="@+id/edt_FName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColorHint = "#3336FF"
+                android:textColor = "#3336FF"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:hint="FName"/>
+
+            <EditText
+                android:id="@+id/edt_MName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColorHint = "#3336FF"
+                android:textColor = "#3336FF"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:hint="MName"/>
+
+            <EditText
+                android:id="@+id/edt_LName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColorHint = "#3336FF"
+                android:textColor = "#3336FF"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:hint="LName"/>
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/edt_Alias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColorHint = "#3336FF"
+            android:textColor = "#3336FF"
+            android:hint="Alias"/>
+
+        <!-- Gender -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Gender"
+                android:textColor="#3336FF"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+
+            <Spinner
+                android:id="@+id/sp_Gender"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:minHeight="25dp"
+                android:layout_height="40dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:spinnerMode="dropdown"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_weight="1"
+                >
+            </Spinner>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Religion"
+                android:layout_marginLeft="10dp"
+                android:textColor = "#3336FF"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+
+
+            <Spinner
+                android:id="@+id/sp_Religion"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:minHeight="25dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:spinnerMode="dropdown"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                >
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Rel_Type"
+                android:textColor="#3336FF"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+
+            <Spinner
+                android:id="@+id/sp_Relation_Type"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:minHeight="25dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:spinnerMode="dropdown"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_height="40dp"
+                android:layout_weight="1">
+            </Spinner>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edt_Rel_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColorHint = "#3336FF"
+            android:textColor = "#3336FF"
+            android:hint="Relative Name"/>
+
+        <TextView
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:text="Physical Detail"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age From"
+                android:textColor="#3336FF"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/edt_age_From"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColorHint = "#3336FF"
+                android:textColor = "#3336FF"
+                android:hint="(in yrs)"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age To"
+                android:paddingLeft="10dp"
+                android:textColor="#3336FF"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/edt_age_To"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+
+                android:textColorHint = "#3336FF"
+                android:textColor = "#3336FF"
+                android:hint="(in yrs)"
+                android:inputType="number"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/HeightFrom"
+                android:textColor="#3336FF"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/edt_height_From_Ft"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColorHint = "#3336FF"
+                android:textColor = "#3336FF"
+
+                android:hint="Ft"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/edt_height_From_Inch"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColorHint = "#3336FF"
+
+                android:textColor = "#3336FF"
+                android:hint="Inch"
+                android:inputType="number"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/HeightTo"
+                android:textColor="#3336FF"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/edt_height_To_Ft"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColorHint = "#3336FF"
+
+                android:textColor = "#3336FF"
+                android:hint="Ft"
+                android:inputType="number"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/edt_height_To_Inch"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColorHint = "#3336FF"
+                android:textColor = "#3336FF"
+                android:hint="Inch"
+
+                android:inputType="number"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:text="Particular Detail"
+            />
+
+        <!--District -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="District"
+                android:textSize="15dp"
+                android:textColor = "#3336FF"
+                android:paddingRight="10dp"
+                android:layout_weight="1"
+                />
+            <Spinner
+                android:id="@+id/District"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:minHeight="25dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:spinnerMode="dropdown"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_weight="1"
+                >
+            </Spinner>
+        </LinearLayout>
+
+        <!--police station -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Police Station"
+                android:textSize="15dp"
+                android:textColor = "#3336FF"
+                android:paddingRight="10dp"
+                android:layout_weight="1"
+                />
+            <Spinner
+                android:id="@+id/PS"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:minHeight="25dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:spinnerMode="dropdown"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_weight="1"
+                >
+            </Spinner>
+        </LinearLayout>
+
+        <TextView
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:text="Search Criteria"
+            />
+
+        <CheckBox
+            android:id="@+id/chkNA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:text="@string/chk_NA" />
+
+        <CheckBox
+            android:id="@+id/chkArrested"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:text="@string/chk_Arr" />
+
+        <CheckBox
+            android:id="@+id/chkCS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:text="@string/chk_CS" />
+
+
+        <CheckBox
+            android:id="@+id/chkConvicted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:text="@string/chk_Con"
+            />
+
+        <CheckBox
+            android:id="@+id/chkPO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:text="@string/chk_PO" />
+
+        <CheckBox
+            android:id="@+id/chkHO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:text="@string/chk_HO" />
+
+
+
+        <Button
+            android:id="@+id/btn_Person_Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textSize="15dp"
+            android:textColor = "#3336FF"
+            android:layout_marginTop="10dp"
+            android:height="25dp"
+            android:textAlignment="center"
+
+            />
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="10dp"-->
+    <!--android:fillViewport="false">-->
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/activity_person_search"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:orientation="vertical"-->
+    <!--tools:context="com.ncrb.samapre.myapplication.MainActivity">-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:weightSum="3">-->
+    <!--<ImageButton-->
+        <!--android:id="@+id/btn_Back"-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@drawable/homeicon"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="#3336FF"-->
+        <!--android:layout_weight="0.3"-->
+        <!--/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/txt_view_header"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Person Search"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:textColor="#3336FF"-->
+        <!--android:background="#CACFD2"-->
+        <!--android:textSize="20dp"-->
+        <!--android:textAlignment="center"-->
+        <!--android:layout_weight="2.7"-->
+        <!--/>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="3">-->
+        <!--<EditText-->
+            <!--android:id="@+id/edt_FName"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint = "#3336FF"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="FName"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edt_MName"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint = "#3336FF"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="MName"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edt_LName"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint = "#3336FF"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="LName"/>-->
+
+<!--</LinearLayout>-->
+
+
+    <!--<EditText-->
+        <!--android:id="@+id/edt_Alias"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColorHint = "#3336FF"-->
+        <!--android:textColor = "#3336FF"-->
+        <!--android:hint="Alias"/>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="4">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/Gender"-->
+            <!--android:textColor="#3336FF"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_weight="1"/>-->
+
+    <!--<Spinner-->
+        <!--android:id="@+id/sp_Gender"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:minHeight="25dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+        <!--android:spinnerMode="dropdown"-->
+        <!--android:background="@android:drawable/btn_dropdown"-->
+        <!--android:layout_weight="1"-->
+        <!--&gt;-->
+    <!--</Spinner>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/Religion"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_weight="1"/>-->
+
+
+        <!--<Spinner-->
+            <!--android:id="@+id/sp_Religion"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:minHeight="25dp"-->
+            <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+            <!--android:spinnerMode="dropdown"-->
+            <!--android:background="@android:drawable/btn_dropdown"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_weight="1"-->
+            <!--&gt;-->
+        <!--</Spinner>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="2">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/Rel_Type"-->
+            <!--android:textColor="#3336FF"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_weight="1"/>-->
+
+    <!--<Spinner-->
+        <!--android:id="@+id/sp_Relation_Type"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:minHeight="25dp"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+        <!--android:spinnerMode="dropdown"-->
+        <!--android:background="@android:drawable/btn_dropdown"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_weight="1">-->
+    <!--</Spinner>-->
+    <!--</LinearLayout>-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/edt_Rel_Name"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColorHint = "#3336FF"-->
+        <!--android:textColor = "#3336FF"-->
+        <!--android:hint="Relative Name"/>-->
+
+    <!--&lt;!&ndash; <EditText-->
+        <!--android:id="@+id/edt_Uid"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColorHint = "#3336FF"-->
+        <!--android:textColor = "#3336FF"-->
+        <!--android:hint="UId"/>&ndash;&gt;-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="4">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Age From"-->
+            <!--android:textColor="#3336FF"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_weight="1"/>-->
+    <!--<EditText-->
+        <!--android:id="@+id/edt_age_From"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColorHint = "#3336FF"-->
+
+        <!--android:textColor = "#3336FF"-->
+        <!--android:hint="(in yrs)"-->
+        <!--android:inputType="number"-->
+        <!--android:layout_weight="1"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Age To"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:textColor="#3336FF"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_weight="1"/>-->
+        <!--<EditText-->
+            <!--android:id="@+id/edt_age_To"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+
+            <!--android:textColorHint = "#3336FF"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:hint="(in yrs)"-->
+            <!--android:inputType="number"-->
+            <!--android:layout_weight="1"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal" android:weightSum="3">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/HeightFrom"-->
+            <!--android:textColor="#3336FF"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_weight="1"/>-->
+    <!--<EditText-->
+        <!--android:id="@+id/edt_height_From_Ft"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColorHint = "#3336FF"-->
+        <!--android:textColor = "#3336FF"-->
+
+        <!--android:hint="Ft"-->
+        <!--android:inputType="number"-->
+        <!--android:layout_weight="1"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edt_height_From_Inch"-->
+            <!--android:layout_width="120dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint = "#3336FF"-->
+
+            <!--android:textColor = "#3336FF"-->
+            <!--android:hint="Inch"-->
+            <!--android:inputType="number"-->
+            <!--android:layout_weight="1"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="3">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/HeightTo"-->
+            <!--android:textColor="#3336FF"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_weight="1"/>-->
+        <!--<EditText-->
+            <!--android:id="@+id/edt_height_To_Ft"-->
+            <!--android:layout_width="120dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint = "#3336FF"-->
+
+            <!--android:textColor = "#3336FF"-->
+            <!--android:hint="Ft"-->
+            <!--android:inputType="number"-->
+            <!--android:layout_weight="1"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edt_height_To_Inch"-->
+            <!--android:layout_width="120dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColorHint = "#3336FF"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:hint="Inch"-->
+
+            <!--android:inputType="number"-->
+            <!--android:layout_weight="1"/>-->
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="2">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:text="@string/District"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor = "#3336FF"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--/>-->
+        <!--<Spinner-->
+            <!--android:id="@+id/District"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:minHeight="25dp"-->
+            <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:spinnerMode="dropdown"-->
+            <!--android:background="@android:drawable/btn_dropdown"-->
+            <!--android:layout_weight="1"-->
+            <!--&gt;-->
+        <!--</Spinner>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="2">-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:text="@string/PS"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColor = "#3336FF"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:layout_weight="1"-->
+        <!--/>-->
+    <!--<Spinner-->
+        <!--android:id="@+id/PS"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:minHeight="25dp"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Light"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:spinnerMode="dropdown"-->
+        <!--android:background="@android:drawable/btn_dropdown"-->
+        <!--android:layout_weight="1"-->
+        <!--&gt;-->
+    <!--</Spinner>-->
+    <!--</LinearLayout>-->
+    <!--<TextView-->
+        <!--android:id="@+id/txt_search_criteria"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="Search Criteria "-->
+        <!--/>-->
+
+    <!--<CheckBox-->
+        <!--android:id="@+id/chkArrested"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColor = "#3336FF"-->
+        <!--android:text="@string/chk_Arr" />-->
+
+    <!--<CheckBox-->
+        <!--android:id="@+id/chkConvicted"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColor = "#3336FF"-->
+        <!--android:text="@string/chk_Con"-->
+        <!--/>-->
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/chkPO"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="15dp"-->
+        <!--android:textColor = "#3336FF"-->
+    <!--android:text="@string/chk_PO" />-->
+
+
+    <!--<CheckBox-->
+        <!--android:id="@+id/chkCS"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColor = "#3336FF"-->
+        <!--android:text="@string/chk_CS" />-->
+    <!--<CheckBox-->
+        <!--android:id="@+id/chkHO"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColor = "#3336FF"-->
+        <!--android:text="@string/chk_HO" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_Person_Search"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Search"-->
+        <!--android:textSize="15dp"-->
+        <!--android:textColor = "#3336FF"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:height="25dp"-->
+        <!--android:textAlignment="center"-->
+
+        <!--/>-->
+
+<!--</LinearLayout>-->
+
+<!--</ScrollView>-->
+

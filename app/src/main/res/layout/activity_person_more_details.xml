@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_person_more_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.ncrb.samapre.myapplication.PersonMoreDetails"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:paddingTop="15dp"
+            android:id="@+id/btn_md_Back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back_arrow"
+            android:textAlignment="center"
+            android:textColor="#3336FF"
+            />
+
+        <TextView
+            android:id="@+id/txt_person_md_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Person More Details"
+            android:textColor="#3336FF"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:id="@+id/pdfLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Arrest Result:"
+                        android:background="@drawable/border"/>
+
+                    <TextView
+                        android:id="@+id/txt_person_md_ArrestedResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Arrest/Surrender Date:"
+                        android:background="@drawable/border"/>
+
+                    <TextView
+                        android:id="@+id/txt_person_md_ArrSurrDt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Arrest State:"
+                        android:background="@drawable/border1"/>
+
+                    <TextView
+                        android:id="@+id/txt_person_md_StateArr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:textColor="#3336FF"
+                        android:layout_weight="1"
+                        android:text="Arrest District:"
+                        android:background="@drawable/border"/>
+                    <TextView
+                        android:id="@+id/txt_person_md_DistrictArr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Arrest PS:"
+                        android:background="@drawable/border1"/>
+
+                    <TextView
+                        android:id="@+id/txt_person_md_PSArr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:textColor="#3336FF"
+                        android:layout_weight="1"
+                        android:text="Arrest Act-Sections:"
+                        android:background="@drawable/border"/>
+                    <TextView
+                        android:id="@+id/txt_person_md_SectionCdArr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"
+                        />
+                    <!--<Button
+                        android:id="@+id/btn_popup"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:text="+"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/border"/>-->
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:textColor="#3336FF"
+                        android:layout_weight="1"
+                        android:text="Occupation:"
+                        android:background="@drawable/border1"/>
+                    <TextView
+                        android:id="@+id/txt_person_md_OccArr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Action Taken:"
+                        android:background="@drawable/border"/>
+                    <TextView
+                        android:id="@+id/txt_person_md_ArrAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Megistrate where Surrendered:"
+                        android:background="@drawable/border"/>
+
+                    <TextView
+                        android:id="@+id/txt_person_md_SURREND_MAGISTRATE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Court where Surrendered:"
+                        android:background="@drawable/border"/>
+
+                    <TextView
+                        android:id="@+id/txt_person_md_SURRENDERED_COURT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:textColor="#3336FF"
+                        android:layout_weight="1"
+                        android:text="Is Chargesheeted:"
+                        android:background="@drawable/border1"/>
+                    <TextView
+                        android:id="@+id/txt_person_md_IsChrg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="2"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Chargesheet Number:"
+                        android:background="@drawable/border"/>
+                    <TextView
+                        android:id="@+id/txt_person_md_ChrgNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Chargesheet Date:"
+                        android:background="@drawable/border1"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_ChrgDt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"/>
+
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Chargesheet Act-Section:"
+                        android:background="@drawable/border1"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_ChrgActSec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"/>
+                    />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Is Convicted:"
+                        android:background="@drawable/border"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_IsConvicted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"/>
+
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Punishment Type:"
+                        android:background="@drawable/border1"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_PunishmentType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"/>
+
+                    />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Judgement Date:"
+                        android:background="@drawable/border"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_JudgementDt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"/>
+
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Punishment Period:"
+                        android:background="@drawable/border1"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_PunishmentPeriod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"/>
+
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Is Proclaimed Offender:"
+                        android:background="@drawable/border"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_isProclaimedOffender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"/>
+
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Proclaimed Offender Court Name:"
+                        android:background="@drawable/border1"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_ProclaimedOffenderCourtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"/>
+
+                    />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Proclaimed Offender Court Type:"
+                        android:background="@drawable/border"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_ProclaimedOffenderCourtType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"/>
+
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Proclaimed Offender Court Location:"
+                        android:background="@drawable/border"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_ProclaimedOffenderCourtLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"/>
+
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Proclaimed Offender Order number:"
+                        android:background="@drawable/border1"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_ProclaimedOffenderOrderNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"/>
+
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Proclaimed Offender Order Date:"
+                        android:background="@drawable/border"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_ProclaimedOffenderOrderDt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border"/>
+
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textColor="#3336FF"
+                        android:text="Is Habitual Offender:"
+                        android:background="@drawable/border1"/>
+                    />
+
+                    <TextView
+                        android:id="@+id/txt_person_md_isHabitualOffender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/border1"/>
+
+                    />
+                </LinearLayout>
+
+            </LinearLayout>
+                          <Button
+                android:id="@+id/btn_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Save As PDF"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+

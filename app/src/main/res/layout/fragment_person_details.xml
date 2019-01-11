@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:gravity="center"
+        android:text="Fetching details...please hold on"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+       />
+    <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+        android:id="@+id/dot_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:amount="3"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_above="@+id/loading"
+        custom:duration="@android:integer/config_mediumAnimTime"
+
+        custom:startColor="@color/light_blue_A700"
+        custom:animationDirection="left"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/scrollV"
+        android:visibility="invisible"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="8dp"
+                    android:id="@+id/first_card"
+
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp">
+
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="80dp"
+                            app:cardCornerRadius="40dp"
+                            android:id="@+id/image_card"
+
+                            app:cardElevation="2dp"
+
+                            android:layout_margin="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="80dp">
+
+                            <ImageView
+                                android:id="@+id/accusedimage"
+                                android:layout_width="match_parent"
+
+                                android:src="@drawable/place_holder_user"
+
+                                android:layout_height="match_parent"
+
+                                />
+                            />
+                        </android.support.v7.widget.CardView>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+
+                            android:id="@+id/txt_person_detail_Full_Name"
+                            android:gravity="center"
+                            android:textSize="17dp"
+
+                            android:textColor="@color/blue"
+                            android:maxLines="1"
+                            android:layout_below="@+id/image_card"
+                            android:layout_height="wrap_content" />
+
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/stat1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/first_card"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+
+                    android:text="Personal Details"
+
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    />
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="8dp"
+                    android:id="@+id/card2"
+                    android:layout_below="@+id/stat1"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+
+
+                        android:orientation="vertical"
+
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+
+
+                                android:layout_height="0dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:text="Alias"
+
+
+                                    android:textColor="@color/blue"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_person_detail_alias"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+
+                                    android:gravity="right"
+
+                                    android:maxLines="1"
+
+                                    android:singleLine="true"
+
+
+                                    android:textSize="14dp" />
+
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+
+                                android:layout_height="0dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+
+                                    android:text="UID Number"
+                                    android:textColor="@color/blue"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_person_detail_UID"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+
+
+                                    android:gravity="right"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+
+                                    android:textSize="14dp" />
+
+
+                            </LinearLayout>
+                                 <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+
+                                android:layout_height="0dp">
+
+                                     <TextView
+                                         android:layout_width="0dp"
+                                         android:layout_height="wrap_content"
+                                         android:layout_weight="1"
+                                         android:fontFamily="@font/lato"
+
+                                         android:text="Gender"
+                                         android:textColor="@color/blue"
+                                         android:textSize="14dp" />
+
+                                     <TextView
+                                         android:id="@+id/txt_person_detail_Gender"
+                                         android:layout_width="0dp"
+                                         android:layout_height="wrap_content"
+
+                                         android:layout_weight="1"
+                                         android:fontFamily="@font/lato"
+                                         android:gravity="right"
+                                         android:maxLines="1"
+                                         android:singleLine="true"
+
+
+                                         android:textSize="14dp" />
+
+                            </LinearLayout>
+                             <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+
+                                android:layout_height="0dp">
+
+                                 <TextView
+                                     android:layout_width="0dp"
+                                     android:layout_height="wrap_content"
+                                     android:layout_weight="1"
+                                     android:fontFamily="@font/lato"
+                                     android:text="Age"
+
+                                     android:textColor="@color/blue"
+                                     android:textSize="14dp" />
+
+                                 <TextView
+                                     android:id="@+id/txt_person_detail_age"
+                                     android:layout_width="0dp"
+                                     android:layout_height="wrap_content"
+
+                                     android:layout_weight="1"
+                                     android:fontFamily="@font/lato"
+                                     android:gravity="right"
+                                     android:maxLines="1"
+                                     android:singleLine="true"
+
+                                     android:textSize="14dp" />
+
+
+                             </LinearLayout>
+                              <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+
+                                android:layout_height="0dp">
+
+                                  <TextView
+                                      android:layout_width="0dp"
+                                      android:layout_height="wrap_content"
+                                      android:layout_weight="1"
+                                      android:fontFamily="@font/lato"
+
+                                      android:text="Religion"
+                                      android:textColor="@color/blue"
+                                      android:textSize="14dp" />
+
+                                  <TextView
+                                      android:id="@+id/txt_person_detail_religion"
+                                      android:layout_width="0dp"
+                                      android:layout_height="wrap_content"
+
+                                      android:layout_weight="1"
+                                      android:fontFamily="@font/lato"
+                                      android:gravity="right"
+
+                                      android:maxLines="1"
+                                      android:singleLine="true"
+
+                                      android:textSize="14dp" />
+
+
+
+                              </LinearLayout>
+
+
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+
+                            android:layout_height="0dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+
+                                    android:text="Height From"
+                                    android:textColor="@color/blue"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_person_detail_Height_From"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:gravity="right"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+
+                                    android:textSize="14dp" />
+
+                        </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+
+                                android:layout_height="0dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:text="Height To"
+                                    android:textColor="@color/blue"
+
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_person_detail_Height_To"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:gravity="right"
+
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+
+                                    android:textSize="14dp" />
+
+
+
+                              </LinearLayout>
+
+
+                              <LinearLayout
+                                android:layout_width="match_parent"
+
+
+
+                                android:layout_height="wrap_content">
+
+                                  <TextView
+                                      android:layout_width="0dp"
+                                      android:layout_height="match_parent"
+                                      android:layout_weight="1"
+                                      android:fontFamily="@font/lato"
+
+                                      android:text="Permanent Address"
+                                      android:textColor="@color/blue"
+                                      android:textSize="14dp" />
+                                  />
+
+                                  <TextView
+                                      android:id="@+id/txt_person_Permanent_Address"
+                                      android:layout_width="0dp"
+                                      android:layout_height="wrap_content"
+
+                                      android:layout_weight="1"
+
+                                      android:fontFamily="@font/lato"
+
+
+                                      android:gravity="right"
+                                      android:maxLines="3"
+
+                                      android:textSize="14dp" />
+
+                                  />
+
+
+                              </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:text="Present Address"
+
+                                    android:textColor="@color/blue"
+                                    android:textSize="14dp" />
+                                />
+
+                                <TextView
+                                    android:id="@+id/txt_person_Present_Address"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:gravity="right"
+
+                                    android:maxLines="3"
+
+                                    android:textSize="14dp" />
+
+
+
+
+                              </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+
+                                android:layout_height="0dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:text="Relative Name"
+                                    android:textColor="@color/blue"
+
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_person_detail_Relative_Name"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+
+
+                                    android:fontFamily="@font/lato"
+                                    android:gravity="right"
+                                    android:singleLine="true"
+
+                                    android:textSize="14dp" />
+
+
+                              </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+
+                                android:layout_height="0dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:text="Relation Type"
+
+                                    android:textColor="@color/blue"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_person_detail_Relation_Type"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:gravity="right"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+
+                                    android:textSize="14dp" />
+
+
+                              </LinearLayout>
+
+
+
+
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/card2"
+                    android:id="@+id/stat2"
+
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Case Details"
+                    />
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/stat2"
+                    android:layout_margin="8dp"
+                    android:id="@+id/card3"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+
+                            android:layout_height="0dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lato"
+
+                                android:text="State"
+
+                                android:textColor="@color/blue"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txt_person_detail_State"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lato"
+
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:singleLine="true"
+
+                                android:textSize="14dp" />
+
+
+
+                        </LinearLayout>
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+
+                            android:layout_height="0dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lato"
+
+                                android:text="District"
+                                android:textColor="@color/blue"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txt_person_detail_district"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lato"
+                                android:gravity="right"
+
+                                android:maxLines="1"
+                                android:singleLine="true"
+
+
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+
+                            android:layout_height="0dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="@color/blue"
+
+                                android:fontFamily="@font/lato"
+                                android:layout_weight="1"
+                                android:text="Police Station"
+                               />
+                            <TextView
+                                android:id="@+id/txt_person_detail_ps"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:maxLines="1"
+                                android:gravity="right"
+                                android:fontFamily="@font/lato"
+                                android:textSize="14dp"
+
+
+                                />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+
+                            android:layout_height="0dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="@color/blue"
+                                android:fontFamily="@font/lato"
+                                android:layout_weight="1"
+                                android:text="Fir Registration No"
+                              />
+
+                            <TextView
+                                android:id="@+id/txt_person_detail_fir_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:maxLines="1"
+                                android:gravity="right"
+                                android:fontFamily="@font/lato"
+                                android:textSize="14dp"
+                                android:layout_weight="1"
+
+                                />
+
+
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+
+                            android:layout_height="0dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/blue"
+                                android:fontFamily="@font/lato"
+                                android:textSize="14dp"
+                                android:text="FIR Date"
+
+                                />
+                            <TextView
+                                android:id="@+id/txt_person_detail_FIR_Date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lato"
+                                android:singleLine="true"
+                                android:maxLines="1"
+                                android:textSize="14dp"
+
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lato"
+                                android:textColor="@color/blue"
+                                android:text="FIR Act-Sections"
+                             />
+
+                            <TextView
+                                android:id="@+id/txt_person_Act_Section"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:fontFamily="@font/lato"
+                                android:gravity="right"
+                                android:textSize="14dp"
+                                android:layout_weight="1"
+
+                                />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+
+                            android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lato"
+                            android:textColor="@color/blue"
+                            android:text="All Accused involved \nin this case"
+                        />
+
+                        <TextView
+                            android:id="@+id/txt_person_All_Accused"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+
+                            android:fontFamily="@font/lato"
+
+                            android:gravity="right"
+                            android:textSize="14dp"
+                            android:layout_weight="1"
+
+
+                            />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/btn_more_details"
+                    android:layout_below="@+id/card3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/blue"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textAllCaps="true"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:fontFamily="@font/lato"
+                    android:text="View More Details"
+                    android:layout_weight="1"/>
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

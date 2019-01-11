@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+
+    <include layout="@layout/centralize_toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A moment please..."
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:fontFamily="@font/lato"
+        android:id="@+id/loading"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        />
+    <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+        android:id="@+id/dot_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:amount="3"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_above="@+id/loading"
+        custom:duration="@android:integer/config_longAnimTime"
+
+        custom:startColor="@color/blue_500"
+        custom:animationDirection="left"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/scroll"
+        android:visibility="invisible"
+        android:layout_above="@+id/btn_Person_Search"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:id="@+id/for_button"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/background_statics_text_vs"
+
+                    android:textStyle="bold"
+                    android:fontFamily="@font/lato"
+
+
+                    android:textAllCaps="true"
+
+
+                    android:id="@+id/stat1"
+                    android:text="Personal Details"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/stat1"
+                    android:id="@+id/lyt1"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/card1"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+                            >
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/edt_FName"
+
+                                android:layout_height="wrap_content">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:drawableLeft="@drawable/u_name"
+                                    android:layout_height="match_parent"
+                                    android:maxLines="1"
+                                    android:textSize="14dp"
+                                    android:fontFamily="@font/lato"
+                                    android:backgroundTint="@color/white"
+
+                                    android:drawablePadding="10dp"
+                                    android:hint="First Name"
+                                    android:textColorHint="@color/black"
+                                    android:textColor = "@color/blue"
+                                    >
+                                </android.support.design.widget.TextInputEditText>
+
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="0dp"
+                                android:id="@+id/edt_MName"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:textSize="14dp"
+                                    android:drawableLeft="@drawable/u_name"
+                                    android:maxLines="1"
+                                    android:hint="Middle Name"
+                                    android:fontFamily="@font/lato"
+                                    android:textColorHint="@color/black"
+                                    android:drawablePadding="10dp"
+                                    android:backgroundTint="@color/white"
+                                    android:textColor = "@color/blue"
+                                    android:layout_height="match_parent">
+
+
+
+
+
+                                </android.support.design.widget.TextInputEditText>
+
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/card2"
+
+                        android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/edt_LName"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14dp"
+                                android:drawablePadding="10dp"
+                                android:backgroundTint="@color/white"
+                                android:drawableLeft="@drawable/u_name"
+                                android:hint="Last Name"
+                                android:maxLines="1"
+                                android:fontFamily="@font/lato"
+                                android:textColorHint="@color/black"
+                                android:textColor = "@color/blue"
+                                >
+
+
+
+
+
+                            </android.support.design.widget.TextInputEditText>
+
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:id="@+id/edt_Alias"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:textSize="14dp"
+                                android:hint="Alias"
+                                android:fontFamily="@font/lato"
+                                android:drawablePadding="10dp"
+                                android:drawableLeft="@drawable/a_name"
+                                android:maxLines="1"
+                                android:textColorHint="@color/black"
+                                android:backgroundTint="@color/white"
+                                android:textColor = "@color/blue"
+                                android:layout_height="match_parent">
+
+
+
+
+
+                            </android.support.design.widget.TextInputEditText>
+
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                    </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                       >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Gender"
+                            android:drawableLeft="@drawable/f_name"
+                            android:drawablePadding="15dp"
+                              android:gravity="center_vertical"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Religion"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/f_name"
+                            android:textColor="@color/black"
+                            android:drawablePadding="10dp"
+                            android:textSize="14dp"
+                            android:layout_weight="1"/>
+
+
+
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <Spinner
+                        android:id="@+id/sp_Gender"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="visible"
+                        android:minHeight="25dp"
+                        android:layout_height="40dp"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light"
+                        android:spinnerMode="dropdown"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:layout_weight="1"
+                        />
+
+
+                    <Spinner
+                        android:id="@+id/sp_Religion"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="5dp"
+                        android:minHeight="25dp"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light"
+                        android:spinnerMode="dropdown"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:layout_height="40dp"
+                        android:layout_weight="1">
+                    </Spinner>
+
+
+                </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+
+                       >
+
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/Rel_Type"
+                                android:gravity="center_vertical"
+                                android:visibility="gone"
+
+                                android:textColor="@color/black"
+
+                                android:drawableLeft="@drawable/f_name"
+                                android:drawablePadding="10dp"
+                                android:textSize="13dp"
+                                android:layout_weight="1"/>
+
+
+
+                            <Spinner
+                                android:id="@+id/sp_Relation_Type"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="5dp"
+                                android:minHeight="25dp"
+                                android:visibility="visible"
+                                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                                android:spinnerMode="dropdown"
+                                android:background="@android:drawable/btn_dropdown"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+
+                    >
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/edt_Rel_Name"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="14dp"
+                            android:drawablePadding="10dp"
+                            android:textColorHint="@color/black"
+                            android:drawableLeft="@drawable/r_name"
+                            android:hint="Relative Name"
+                            android:backgroundTint="@color/white"
+                            android:maxLines="1"
+                            android:textColor = "@color/blue"
+                            android:fontFamily="@font/lato"
+                            >
+
+
+
+
+
+                        </android.support.design.widget.TextInputEditText>
+
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/lyt1"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/lato"
+                    android:id="@+id/stat2"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="true"
+
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:background="@drawable/background_statics_text_vs"
+                    android:text="Physical Details"
+
+                    android:layout_height="wrap_content" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/stat2"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="0dp"
+                                android:id="@+id/edt_age_From"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:textSize="14dp"
+                                    android:hint="Age from (in yrs)"
+                                    android:fontFamily="@font/lato"
+                                    android:maxLines="1"
+                                    android:textColorHint="@color/black"
+                                    android:drawablePadding="10dp"
+                                    android:drawableLeft="@drawable/age"
+                                    android:backgroundTint="@color/white"
+
+                                    android:textColor = "@color/blue"
+                                    android:layout_height="match_parent">
+
+
+
+
+
+                                </android.support.design.widget.TextInputEditText>
+
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="0dp"
+                                android:id="@+id/edt_age_To"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:textSize="14dp"
+                                    android:hint="Age to (in yrs)"
+                                    android:textColorHint="@color/black"
+                                    android:drawablePadding="10dp"
+                                    android:drawableLeft="@drawable/age"
+                                    android:fontFamily="@font/lato"
+                                    android:maxLines="1"
+                                    android:backgroundTint="@color/white"
+                                    android:textColor = "@color/blue"
+                                    android:layout_height="match_parent">
+
+
+
+
+
+                                </android.support.design.widget.TextInputEditText>
+
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                      >
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:id="@+id/edt_height_From_Ft"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:textSize="14dp"
+                                android:hint="Height from (ft)"
+                                android:textColor = "@color/blue"
+                                android:drawablePadding="10dp"
+                                android:drawableLeft="@drawable/height_from"
+                                android:backgroundTint="@color/white"
+                                android:textColorHint="@color/black"
+                                android:maxLines="1"
+                                android:fontFamily="@font/lato"
+                                android:layout_height="match_parent">
+
+
+
+
+
+                            </android.support.design.widget.TextInputEditText>
+
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:id="@+id/edt_height_From_Inch"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:textSize="14dp"
+                                android:hint="Height from (inches)"
+                                android:fontFamily="@font/lato"
+                                android:textColor = "@color/blue"
+                                android:drawablePadding="10dp"
+                                android:drawableLeft="@drawable/height_from"
+                                android:textColorHint="@color/black"
+                                android:backgroundTint="@color/white"
+                                android:maxLines="1"
+                                android:layout_height="match_parent">
+
+
+
+
+
+                            </android.support.design.widget.TextInputEditText>
+
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                    </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                   <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                      >
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:id="@+id/edt_height_To_Ft"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:textSize="14dp"
+                                android:hint="Height to (ft)"
+                                android:backgroundTint="@color/white"
+                                android:textColor = "@color/blue"
+                                android:drawablePadding="10dp"
+                                android:drawableLeft="@drawable/height_to"
+                                android:textColorHint="@color/black"
+                                android:fontFamily="@font/lato"
+                                android:maxLines="1"
+                                android:layout_height="match_parent">
+
+
+
+
+
+                            </android.support.design.widget.TextInputEditText>
+
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:id="@+id/edt_height_To_Inch"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:textSize="14dp"
+                                android:hint="Height to (inches)"
+                                android:textColor = "@color/blue"
+                                android:backgroundTint="@color/white"
+                                android:drawablePadding="10dp"
+                                android:drawableLeft="@drawable/height_to"
+                                android:textColorHint="@color/black"
+                                android:fontFamily="@font/lato"
+                                android:maxLines="1"
+                                android:layout_height="match_parent">
+
+
+
+
+
+                            </android.support.design.widget.TextInputEditText>
+
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                    </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/lyt1"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/lato"
+
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/background_statics_text_vs"
+                        android:textStyle="bold"
+                        android:text="Particular Details"
+
+                        android:textAllCaps="true"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        >
+                        <Spinner
+                            android:id="@+id/AllState"
+                            android:layout_width="0dp"
+
+                            android:layout_marginTop="5dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            android:spinnerMode="dropdown"
+                            android:background="@android:drawable/btn_dropdown"
+                            android:layout_weight="1"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        >
+                        <Spinner
+
+                            android:layout_width="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:visibility="visible"
+                            android:id="@+id/District"
+                            android:minHeight="25dp"
+                            android:layout_height="40dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            android:spinnerMode="dropdown"
+                            android:background="@android:drawable/btn_dropdown"
+                            android:layout_weight="1"
+                            >
+                        </Spinner>
+
+                        <Spinner
+                            android:id="@+id/PS"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="5dp"
+                            android:minHeight="25dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            android:spinnerMode="dropdown"
+                            android:background="@android:drawable/btn_dropdown"
+                            android:layout_height="40dp"
+                            android:layout_weight="1">
+                        </Spinner>
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/lyt1"
+                        android:textSize="14dp"
+                        android:textColor="@color/black"
+
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_statics_text_vs"
+                        android:textStyle="bold"
+                        android:text="Search Criteria"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/lato"
+
+                        android:layout_height="wrap_content" />
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    >
+                    <CheckBox
+                        android:id="@+id/chkNA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor = "@color/black"
+                        android:text="@string/chk_NA" />
+
+                    <CheckBox
+                        android:id="@+id/chkArrested"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor = "@color/black"
+                        android:fontFamily="@font/lato"
+
+                        android:text="@string/chk_Arr" />
+
+                    <CheckBox
+                        android:id="@+id/chkCS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/lato"
+                        android:textColor = "@color/black"
+                        android:text="@string/chk_CS" />
+
+
+                    <CheckBox
+                        android:id="@+id/chkConvicted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/lato"
+                        android:textColor = "@color/black"
+                        android:text="@string/chk_Con"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/chkPO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/lato"
+                        android:textColor = "@color/black"
+                        android:text="@string/chk_PO" />
+
+                    <CheckBox
+                        android:id="@+id/chkHO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor = "@color/black"
+                        android:fontFamily="@font/lato"
+                        android:text="@string/chk_HO" />
+
+                </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_Person_Search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:drawableLeft="@drawable/search_icon"
+        android:background="@color/silver"
+        android:paddingLeft="20dp"
+        android:visibility="invisible"
+        android:drawablePadding="-60dp"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:textSize="18dp"
+        android:textColor = "@color/black"
+
+        android:height="25dp"
+        android:textAlignment="center"
+
+        />
+
+
+
+</RelativeLayout>

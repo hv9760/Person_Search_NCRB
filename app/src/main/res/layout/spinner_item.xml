@@ -1,0 +1,9 @@
+<TextView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Select Religion"
+    android:textColor="@color/black"
+    android:id="@+id/gender"
+    android:padding="15dp"
+    android:textSize="18dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+

@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/centralize_toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A moment please..."
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:fontFamily="@font/lato"
+            android:id="@+id/loading"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            />
+        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+            android:id="@+id/dot_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            custom:amount="3"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_above="@+id/loading"
+            custom:duration="@android:integer/config_longAnimTime"
+            custom:startColor="@color/blue_500"
+            custom:animationDirection="left"/>
+        <Button
+            android:id="@+id/btn_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Save As PDF"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_above="@+id/btn_pdf"
+            android:fillViewport="true"
+            android:id="@+id/scroll"
+
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+
+                    android:layout_height="match_parent">
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:id="@+id/pdfLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="match_parent"
+                              >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Arrest Result"
+                                   />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txt_person_md_ArrestedResult"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:layout_weight="1"
+                                    android:text="erhvh3v3h"
+
+                                    android:textSize="14dp"
+
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="match_parent"
+                             >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+
+                                    android:textColor="@color/blue"
+                                    android:text="Arrest/Surrender Date"
+                                 />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/txt_person_md_ArrSurrDt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                           android:padding="10dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Arrest State"
+                                  />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/txt_person_md_StateArr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+
+
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:layout_weight="1"
+                                    android:text="Arrest District"
+                                  />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/txt_person_md_DistrictArr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+
+                                    android:layout_weight="1"
+                                    android:textSize="14dp"
+
+                                    />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="wrap_content"
+                               >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Arrest PS"
+                                />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txt_person_md_PSArr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+
+                                    />
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:layout_weight="1"
+                                    android:text="Arrest Act-Sections"
+                                   />
+
+                                <!--<Button
+                                    android:id="@+id/btn_popup"
+                                    android:layout_width="40dp"
+                                    android:layout_height="20dp"
+                                    android:text="+"
+                                    android:layout_weight="0.1"
+                                    android:background="@drawable/border"/>-->
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txt_person_md_SectionCdArr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+
+                                    android:layout_weight="1"
+                                    android:textSize="14dp"
+
+
+                                    />
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:layout_weight="1"
+                                    android:text="Occupation"
+                                  />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/txt_person_md_OccArr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+
+                                    android:layout_weight="1"
+                                    android:textSize="14dp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Action Taken"
+                                   />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_ArrAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:layout_weight="1"
+
+                                    android:textSize="14dp"
+
+                                    />
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="match_parent"
+                               >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Megistrate where Surrendered"
+                                 />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txt_person_md_SURREND_MAGISTRATE"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                             >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Court where Surrendered"
+                                  />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_SURRENDERED_COURT"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+
+
+                                    />
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                            >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:layout_weight="1"
+                                    android:text="Is Chargesheeted"
+                                   />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_IsChrg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+
+                                    android:layout_weight="1"
+                                    android:textSize="14dp"
+
+
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:padding="10dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Chargesheet Number"
+                                 />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/txt_person_md_ChrgNum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:layout_weight="1"
+
+                                    android:textSize="14dp"
+
+                                    />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+
+                            >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Chargesheet Date"
+                                   />
+                                />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >  <TextView
+                                android:id="@+id/txt_person_md_ChrgDt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+
+                                android:textSize="14dp"
+                                android:layout_weight="1"
+                               />
+
+                                />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="match_parent"
+
+                             >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Chargesheet Act-Section"
+                                   />
+                                />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_ChrgActSec"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                  />
+                                />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Is Convicted"
+                                 />
+                                />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >
+
+
+                                <TextView
+                                    android:id="@+id/txt_person_md_IsConvicted"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+
+                                   />
+
+                                />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="match_parent"
+
+                               >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Punishment Type"
+                                  />
+                                />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_PunishmentType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                  />
+
+                                />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+
+                              >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Judgement Date"
+                                  />
+                                />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_JudgementDt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                  />
+
+                                />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Punishment Period"
+                                />
+                                />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_PunishmentPeriod"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"/>
+
+                                />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+
+                             >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Is Proclaimed Offender"
+                                  />
+                                />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >
+
+                                <TextView
+                                    android:id="@+id/txt_person_md_isProclaimedOffender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"/>
+
+                                />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="match_parent"
+
+                              >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Proclaimed Offender Court Name"
+                                   />
+                                />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_ProclaimedOffenderCourtName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"/>
+
+                                />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="match_parent"
+                             >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Proclaimed Offender Court Type"
+                                  />
+                                />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_ProclaimedOffenderCourtType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"/>
+
+                                />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Proclaimed Offender Court Location"
+                                    />
+                                />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_ProclaimedOffenderCourtLocation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"/>
+
+                                />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:layout_height="match_parent"
+                               >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Proclaimed Offender Order number"
+                                  />
+                                />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <TextView
+                                    android:id="@+id/txt_person_md_ProclaimedOffenderOrderNum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                 />
+
+                                />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Proclaimed Offender Order Date"
+                                   />
+                                />
+
+
+                                />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >  <TextView
+                                android:id="@+id/txt_person_md_ProclaimedOffenderOrderDt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+
+                                android:textSize="14dp"
+                                android:layout_weight="1"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+
+                            >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/lato"
+                                    android:textColor="@color/blue"
+                                    android:text="Is Habitual Offender"
+                                    />
+                                />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                >
+
+                                <TextView
+                                    android:id="@+id/txt_person_md_isHabitualOffender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:textSize="14dp"
+                                    android:layout_weight="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"/>
+
+                                />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </ScrollView>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent"
+           >
+
+            <RelativeLayout
+                android:id="@+id/upper_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/img"
+                    android:src="@drawable/ncrb"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/textView"
+
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Government of India"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="Ministry of Home Affairs"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView1"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="National Crime Records Bureau"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_lyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upper_lyt"
+                android:layout_margin="20dp"
+                android:background="@drawable/white_broder"
+                android:padding="30dp">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/edt_userid"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:drawableLeft="@drawable/u_name"
+                        android:fontFamily="sans-serif-condensed"
+                        android:drawablePadding="20dp"
+                        android:hint="Enter User ID"
+                        android:text="lasho"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edt_userid">
+
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/transparent"
+                        android:drawableLeft="@drawable/pass"
+
+                        android:fontFamily="sans-serif-condensed"
+                        android:drawablePadding="20dp"
+                        android:hint="Password"
+                        android:paddingLeft="5dp"
+                        android:text="ncrb@222"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_toEndOf="@+id/textLogin"
+                    android:layout_toRightOf="@+id/textLogin"
+                    android:text="Cancel"
+                    android:textColor="#3336FF"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+
+
+
+                    <Button
+                        android:id="@+id/button_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="25dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/gray"
+                        android:layout_below="@+id/second_lyt"
+                        android:text="LOG IN"
+
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
